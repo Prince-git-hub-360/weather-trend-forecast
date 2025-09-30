@@ -124,5 +124,5 @@ pip install -r requirements.txt
 ## Contact
 
 - **GitHub:** [https://github.com/Prince-git-hub-360](https://github.com/Prince-git-hub-360)  
-- **Email:** kumariafprinnce@gmail.com
+- **Email:** kumariafprince@gmail.com
 - **LinkedIn:** [https://www.linkedin.com/in/prince-kumar](https://www.linkedin.com/in/prince-kumar-576544374/) 
