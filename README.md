@@ -100,15 +100,15 @@ weather-trend-forecast/
 1. Clone the repository:  
 ```bash
 git clone https://github.com/Prince-git-hub-360/weather-trend-forecast.git
-
+```
 2. Install dependencies:
 ```bash 
 pip install -r requirements.txt
-
+```
 3. Open notebooks in order (01 → 06) and run step by step in Jupyter Notebook or VS Code.
 
 ## Contact
 
 - **GitHub:** [https://github.com/Prince-git-hub-360](https://github.com/Prince-git-hub-360)  
-- **Email:** prince.kumar@example.com  
-- **LinkedIn:** [https://www.linkedin.com/in/prince-kumar](https://www.linkedin.com/in/prince-kumar)  <!-- optional -->
+- **Email:** kumariafprinnce@gmail.com
+- **LinkedIn:** [https://www.linkedin.com/in/prince-kumar](https://www.linkedin.com/in/prince-kumar-576544374/) 
