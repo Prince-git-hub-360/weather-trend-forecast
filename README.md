@@ -46,43 +46,57 @@ weather-trend-forecast/
 
 ---
 
-## **Methodology**
 
-### **1. Data Loading**
-- Loaded the dataset using `pandas`  
-- Converted `last_updated` column to datetime  
-- Ensured essential columns exist (location_name, country)
+## Workflow / Methodology
 
-### **2. Data Cleaning**
-- Removed duplicates  
-- Handled missing values:
-  - Numeric: filled per location and month median
-  - Categorical: filled with `"Unknown"`  
-- Removed extreme outliers using Z-score  
-- Interpolated remaining missing values  
+### 1. Data Cleaning & Preprocessing
+- Dropped duplicates
+- Handled missing numeric values with **median per location + month**
+- Filled missing categorical values with `"Unknown"`
+- Removed extreme outliers using **z-score**
+- Interpolated remaining numeric missing values
+- Saved cleaned dataset to `data/processed/weather_cleaned.csv`
 
-### **3. Exploratory Data Analysis (EDA)**
-- Analyzed trends and seasonal patterns  
-- Visualized:
-  - Temperature and precipitation over time  
-  - Correlation between weather features  
-  - Geographical differences across countries  
+### 2. Exploratory Data Analysis (EDA)
+- Generated **summary statistics** for temperature, precipitation, humidity, wind, and cloud coverage
+- Plotted **temperature & precipitation distributions**
+- Created **scatter plots** for Temperature vs Humidity
+- Seasonal trends: **Monthly average temperature**
+- Correlation analysis with **heatmap**
 
-### **4. Forecasting Models**
-- Built regression models using **scikit-learn**:  
-  - Linear Regression  
-  - Random Forest  
-  - Gradient Boosting  
-- Evaluated using MAE and RMSE  
-- Selected best-performing model for prediction  
+### 3. Forecasting Models
+- **RandomForestRegressor** used to predict temperature
+- Features: `humidity`, `precip_mm`, `wind_kph`, `cloud`
+- Model evaluation metrics:
+  - MAE and RMSE
+- Feature importance visualized
 
-### **5. Advanced Analysis**
-- Detected anomalies in weather patterns  
-- Analyzed feature importance  
-- Explored climate patterns across regions  
-- Optional: spatial and environmental impact analysis  
+### 4. Advanced Analysis
+- **Anomaly Detection** for temperature using IsolationForest
+- Seasonal trends analysis by month
+- Top 10 hottest countries visualized
+- Identified key patterns across locations
 
----
+### 5. Results & Recommendations
+- Forecasting shows reasonable accuracy; ensemble models recommended for improvement
+- Extend analysis to all locations and include environmental factors
+- Spatial patterns and GIS visualizations suggested
+- Climate and seasonal trends highlighted for key insights
+
+## Figures
+All figures are saved in `reports/figures/`:
+- `temperature_distribution.png`
+- `precipitation_distribution.png`
+- `temp_vs_humidity.png`
+- `avg_temp_by_month.png`
+- `feature_importance.png`
+- `actual_vs_predicted.png`
+- `temperature_anomalies.png`
+- `top_countries_temperature.png`
+- `correlation_matrix_summary.png`
+- `avg_temp_by_month_summary.png`
+- `top_countries_summary.png`
+
 
 ## **Results**
 - Cleaned dataset saved to `data/processed/weather_cleaned.csv`  
